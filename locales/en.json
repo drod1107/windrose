@@ -1,7 +1,7 @@
 {
   "RootLayout": {
     "title": "Windrose",
-    "description": "Windrose is an open source CRM build on top of NextCRM in NextJS."
+    "description": "Windrose is an open source CRM built on top of NextJS."
   },
   "ModuleMenu": {
     "dashboard": "Dashboard",
@@ -24,6 +24,7 @@
   "DashboardPage": {
     "containerTitle": "Dashboard",
     "totalRevenue": "Total revenue",
+    "containerDescription": "Welcome to Windrose, here you can see all important information about your business.",
     "containerDescription": "Welcome to Windrose, here you can see all important information about your business.",
     "expectedRevenue": "Expected revenue",
     "activeUsers": "Active users",
