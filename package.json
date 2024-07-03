@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "pnpm install --no-frozen-lockfile",
-    "build": "prisma generate && prisma migrate deploy && next build",
+    "build": "npx prisma generate && npx prisma migrate deploy && next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate"
@@ -71,7 +71,7 @@
     "primeicons": "^7.0.0",
     "primereact": "^10.6.3",
     "prisma": "^5.13.0",
-    "react": "^18.3.1",
+    "react": "18.3.1",
     "react-beautiful-dnd": "^13.1.1",
     "react-day-picker": "^8.10.1",
     "react-doc-viewer": "^0.1.5",
