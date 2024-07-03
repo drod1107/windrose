@@ -9,7 +9,10 @@
     "postinstall": "prisma generate",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "prod": "npm run prebuild && npm run build && npm run postinstall"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seeds/seed.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.565.0",
