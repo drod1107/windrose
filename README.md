@@ -155,4 +155,6 @@ We use Tremor charts as a tool for creating charts in NextCRM
 
 ## License
 
-Licensed under the [MIT license](https://github.com/drod1107/windrose/blob/main/LICENSE).
+Licensed under strict commercial use only for all proprietary additions. 
+
+Originated work from NextCRM is licensed under the [MIT license](https://github.com/drod1107/windrose/blob/main/LICENSE).
