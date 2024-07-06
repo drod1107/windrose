@@ -13,11 +13,6 @@ Windrose is built on top of Next CRM, which is a CRM build on top of the Next.JS
 Windrose is built on top of Next CRM, which is a CRM build on top of the Next.JS 14 using TypeScript, great UI library shadcn, Prisma and MongoDB as a database. Upload things as a S3 blob for document storage.
 </p> -->
 
-<p align="center">
-  <a href="https://github.com/pdovhomilja/nextcrm-app/blob/main/LICENSE">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/pdovhomilja/nextcrm-app">
-  </a>
-</p>
 
 <p align="center">
    <a href="#online-demo"><strong>Introduction</strong></a> ·
