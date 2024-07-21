@@ -66,24 +66,24 @@ const OpenAiCard = async () => {
           {/*  Here will be actual settings */}
           <p>ENV API key:</p>
           <p>
-            {process.env.OPENAI_API_KEY ? (
+            {/* {process.env.OPENAI_API_KEY ? (
               <CopyKeyComponent
                 envValue={process.env.OPENAI_API_KEY}
                 message="OpenAi - API Key"
               />
             ) : (
               "not enabled"
-            )}
+            )} */}
           </p>
           <p>API key from DB:</p>
-          {openAi_key?.serviceKey ? (
+          {/* {openAi_key?.serviceKey ? (
             <CopyKeyComponent
               keyValue={openAi_key.serviceKey}
               message="OpenAi - API Key"
             />
           ) : (
             "not enabled"
-          )}
+          )} */}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-2">
