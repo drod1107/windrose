@@ -75,9 +75,11 @@ export async function POST(request: NextRequest) {
     console.log("Was not able to upload the document...", err);
   }
   const docFileName = "docs/" + new Date().getTime() + "-" + file.name;
+  const docFileName = "docs/" + new Date().getTime() + "-" + file.name;
 
   const bucketParams = {
     Bucket: process.env.DO_BUCKET,
+    Key: docFileName,
     Key: docFileName,
     Body: buffer,
     ContentType: file.type,
@@ -94,22 +96,25 @@ export async function POST(request: NextRequest) {
   try {
     //S3 bucket url for the doc
     const url = `https://${process.env.DO_BUCKET}.${process.env.DO_REGION}.digitaloceanspaces.com/${docFileName}`;
+    //S3 bucket url for the doc
+    const url = `https://${process.env.DO_BUCKET}.${process.env.DO_REGION}.digitaloceanspaces.com/${docFileName}`;
     //console.log(url, "url");
     const rossumDocumentId = rossumDocument.split("/").slice(-1)[0];
     const rossumAnnotationId = rossumAnnotation.split("/").slice(-1)[0];
     //Save the data to the database
 
-    await prismadb.documents.create({
+    await prismadb.docs.create({
       data: {
-        document_name: "Some Document Name", // Add this required field
-        updated_by_user: session.user.id,
+        last_updated_by: session.user.id,
+        date_due: new Date(),
         description: "Incoming doc",
-        document_type: "RESOURCE", // Make sure this is a valid ObjectId string
+        document_type: "doc",
+        doc_type: "Taxable document",
         status: "new",
         favorite: false,
-        assigned_user: session.user.id,
-        document_file_url: url,
-        document_file_mimeType: file.type,
+        assigned_user_id: session.user.id,
+        doc_file_url: url,
+        doc_file_mimeType: file.type,
         rossum_status: "importing",
         rossum_document_url: rossumDocument || null,
         rossum_document_id: rossumDocumentId || null,

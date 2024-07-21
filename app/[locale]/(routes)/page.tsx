@@ -27,7 +27,7 @@ import {
   getUsersTasksCount,
 } from "@/actions/dashboard/get-tasks-count";
 import { getModules } from "@/actions/get-modules";
-import { getEmployees } from "@/actions/get-employees";
+import { getClients } from "@/actions/get-clients";
 
 import { getLeadsCount } from "@/actions/dashboard/get-leads-count";
 import { getBoardsCount } from "@/actions/dashboard/get-boards-count";
@@ -57,7 +57,7 @@ const DashboardPage = async () => {
   const lang = session?.user?.userLanguage;
 
   //Fetch translations from dictionary
-  const dict = await getDictionary(lang as "en" | "cz" | "de" | "uk");
+  const dict = await getDictionary(lang as "en");
 
   //Fetch data for dashboard
   const modules = await getModules();
@@ -79,7 +79,7 @@ const DashboardPage = async () => {
   const crmModule = modules.find((module) => module.name === "crm");
   const projectsModule = modules.find((module) => module.name === "projects");
   const documentsModule = modules.find((module) => module.name === "documents");
-  const employeesModule = modules.find((module) => module.name === "employees");
+  const clientsModule = modules.find((module) => module.name === "clients");
   const secondBrainModule = modules.find(
     (module) => module.name === "secondBrain"
   );
@@ -130,12 +130,12 @@ const DashboardPage = async () => {
           IconComponent={UserIcon}
           content={users}
         />
-        {employeesModule?.enabled && (
+        {clientsModule?.enabled && (
           <DashboardCard
-            href="/employees"
-            title="Employees"
+            href="/clients"
+            title="Clients"
             IconComponent={Users2Icon}
-            content={employees.length}
+            content={clients.length}
           />
         )}
         {crmModule?.enabled && (
@@ -194,14 +194,7 @@ const DashboardPage = async () => {
             />
           </>
         )}
-        {invoiceModule?.enabled && (
-          <DashboardCard
-            href="/invoice"
-            title={dict.DashboardPage.invoices}
-            IconComponent={CoinsIcon}
-            content={invoices}
-          />
-        )}
+
         {documentsModule?.enabled && (
           <DashboardCard
             href="/documents"
