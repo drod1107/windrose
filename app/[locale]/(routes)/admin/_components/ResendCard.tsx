@@ -78,7 +78,7 @@ const ResendCard = async () => {
           <p>
             {/* {resend_key?.serviceKey ? (
               <CopyKeyComponent
-                keyValue={resend_key?.serviceKey}
+                // keyValue={resend_key?.serviceKey}
                 message="Resend - API Key"
               />
             ) : (

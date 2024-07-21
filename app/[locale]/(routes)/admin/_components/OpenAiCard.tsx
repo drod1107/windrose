@@ -68,7 +68,7 @@ const OpenAiCard = async () => {
           <p>
             {/* {process.env.OPENAI_API_KEY ? (
               <CopyKeyComponent
-                envValue={process.env.OPENAI_API_KEY}
+                // envValue={process.env.OPENAI_API_KEY}
                 message="OpenAi - API Key"
               />
             ) : (
