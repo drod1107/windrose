@@ -74,11 +74,11 @@ export async function POST(request: NextRequest) {
   } catch (err) {
     console.log("Was not able to upload the document...", err);
   }
-  const invoiceFileName = "invoices/" + new Date().getTime() + "-" + file.name;
+  const docFileName = "docs/" + new Date().getTime() + "-" + file.name;
 
   const bucketParams = {
     Bucket: process.env.DO_BUCKET,
-    Key: invoiceFileName,
+    Key: docFileName,
     Body: buffer,
     ContentType: file.type,
     ContentDisposition: "inline",
@@ -92,31 +92,30 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    //S3 bucket url for the invoice
-    const url = `https://${process.env.DO_BUCKET}.${process.env.DO_REGION}.digitaloceanspaces.com/${invoiceFileName}`;
+    //S3 bucket url for the doc
+    const url = `https://${process.env.DO_BUCKET}.${process.env.DO_REGION}.digitaloceanspaces.com/${docFileName}`;
     //console.log(url, "url");
     const rossumDocumentId = rossumDocument.split("/").slice(-1)[0];
     const rossumAnnotationId = rossumAnnotation.split("/").slice(-1)[0];
     //Save the data to the database
 
-    await prismadb.invoices.create({
+    await prismadb.documents.create({
       data: {
-        last_updated_by: session.user.id,
-        date_due: new Date(),
-        description: "Incoming invoice",
-        document_type: "invoice",
-        invoice_type: "Taxable document",
+        document_name: "Some Document Name", // Add this required field
+        updated_by_user: session.user.id,
+        description: "Incoming doc",
+        document_type: "RESOURCE", // Make sure this is a valid ObjectId string
         status: "new",
         favorite: false,
-        assigned_user_id: session.user.id,
-        invoice_file_url: url,
-        invoice_file_mimeType: file.type,
+        assigned_user: session.user.id,
+        document_file_url: url,
+        document_file_mimeType: file.type,
         rossum_status: "importing",
-        rossum_document_url: rossumDocument,
-        rossum_document_id: rossumDocumentId,
-        rossum_annotation_url: rossumAnnotation,
-        rossum_annotation_id: rossumAnnotationId,
-      },
+        rossum_document_url: rossumDocument || null,
+        rossum_document_id: rossumDocumentId || null,
+        rossum_annotation_url: rossumAnnotation || null,
+        rossum_annotation_id: rossumAnnotationId || null,
+      }
     });
 
     return NextResponse.json({ success: true });
