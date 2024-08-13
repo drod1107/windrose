@@ -104,7 +104,12 @@ export async function POST(request: NextRequest) {
     //Save the data to the database
 
     await prismadb.documents.create({
+    await prismadb.documents.create({
       data: {
+        document_name: "Some Document Name", // Add this required field
+        updated_by_user: session.user.id,
+        description: "Incoming doc",
+        document_type: "RESOURCE", // Make sure this is a valid ObjectId string
         document_name: "Some Document Name", // Add this required field
         updated_by_user: session.user.id,
         description: "Incoming doc",
@@ -114,7 +119,15 @@ export async function POST(request: NextRequest) {
         assigned_user: session.user.id,
         document_file_url: url,
         document_file_mimeType: file.type,
+        assigned_user: session.user.id,
+        document_file_url: url,
+        document_file_mimeType: file.type,
         rossum_status: "importing",
+        rossum_document_url: rossumDocument || null,
+        rossum_document_id: rossumDocumentId || null,
+        rossum_annotation_url: rossumAnnotation || null,
+        rossum_annotation_id: rossumAnnotationId || null,
+      }
         rossum_document_url: rossumDocument || null,
         rossum_document_id: rossumDocumentId || null,
         rossum_annotation_url: rossumAnnotation || null,

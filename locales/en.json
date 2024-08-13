@@ -2,6 +2,8 @@
   "RootLayout": {
     "title": "Windrose",
     "description": "Windrose is an open source CRM build on top of NextCRM in NextJS."
+    "title": "Windrose",
+    "description": "Windrose is an open source CRM build on top of NextCRM in NextJS."
   },
   "ModuleMenu": {
     "dashboard": "Dashboard",
@@ -36,12 +38,14 @@
     "tasks": "Tasks",
     "myTasks": "My tasks",
     "documents": "Docs",
+    "documents": "Docs",
     "storage": "Storage"
   },
   "RegisterComponent": {
     "cardTitle": "Create new account",
     "cardDescription": "Create account by login with",
     "label": "Language",
+    "locale": "{locale, select,en {English}}"
     "locale": "{locale, select,en {English}}"
   },
   "CrmModuleMenuComponent": {

@@ -56,6 +56,7 @@ export async function POST(req: Request) {
         from: "Windrose <info@windrose.dev>",
         to: user.email,
         subject: "Windrose - Password reset",
+        subject: "Windrose - Password reset",
         text: "", // Add this line to fix the types issue
         //react: DemoTemplate({ firstName: "John" }),
         react: PasswordResetEmail({

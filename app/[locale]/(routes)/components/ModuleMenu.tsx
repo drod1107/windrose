@@ -6,8 +6,11 @@ import Image from "next/image";
 
 import ProjectModuleMenu from "./menu-items/Projects";
 import JourneyBuilderModuleMenu from "./menu-items/JourneyBuilder";
+import JourneyBuilderModuleMenu from "./menu-items/JourneyBuilder";
 import ReportsModuleMenu from "./menu-items/Reports";
 import DocumentsModuleMenu from "./menu-items/Documents";
+import WindroseNavModuleMenu from "./menu-items/WindroseNav";
+import ClientsModuleMenu from "./menu-items/Clients";
 import WindroseNavModuleMenu from "./menu-items/WindroseNav";
 import ClientsModuleMenu from "./menu-items/Clients";
 import CrmModuleMenu from "./menu-items/Crm";

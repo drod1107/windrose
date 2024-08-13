@@ -6,6 +6,7 @@
 
 <p align="center">
 <img alt="OG" src="public/images/windroseLogo.png" />
+<img alt="OG" src="public/images/windroseLogo.png" />
 </p>
 
 <!-- <p align="center">
@@ -27,6 +28,7 @@ Windrose is built on top of Next CRM, which is a CRM build on top of the Next.JS
 
 ## Online Demo
 
+You can try it here [app.windrose.dev](https://app.windrose.dev), login via Google account or create new user and password.
 You can try it here [app.windrose.dev](https://app.windrose.dev), login via Google account or create new user and password.
 
 ## Tech Stack + Features
@@ -64,12 +66,17 @@ You can try it here [app.windrose.dev](https://app.windrose.dev), login via Goog
 <!-- - [Rossum](https://rossum.ai/) - for invoice data parsing with AI -->
 
 ## 
+<!-- - [Rossum](https://rossum.ai/) - for invoice data parsing with AI -->
+
+## 
 
 ## Emails
 
 We use [resend.com](https://resend.com) + [react.email](https://react.email) as primary email sender and email templates.
 
 ## Reports
+
+We use Tremor charts as a tool for creating charts in Windrose
 
 We use Tremor charts as a tool for creating charts in Windrose
 
@@ -113,6 +120,8 @@ We use Tremor charts as a tool for creating charts in Windrose
    > > - uploadthings - for storing files
    <!-- Rossum has been temporarily disabled with plans to migrate to Gemini OCR -->
    <!-- > > - rossum - for invoice data exporting -->
+   <!-- Rossum has been temporarily disabled with plans to migrate to Gemini OCR -->
+   <!-- > > - rossum - for invoice data exporting -->
    > > - openAI - for automatic Project management assistant
    > > - SMPT and IMAP for emails
 
@@ -152,6 +161,9 @@ We use Tremor charts as a tool for creating charts in Windrose
 
 ## License
 
+Licensed under strict commercial use only for all proprietary additions. 
+
+Originated work from NextCRM is licensed under the [MIT license](https://github.com/drod1107/windrose/blob/main/LICENSE).
 Licensed under strict commercial use only for all proprietary additions. 
 
 Originated work from NextCRM is licensed under the [MIT license](https://github.com/drod1107/windrose/blob/main/LICENSE).
