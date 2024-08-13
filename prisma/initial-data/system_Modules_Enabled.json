@@ -20,7 +20,6 @@
   {
     "v": 0,
     "name": "journeyBuilder",
-    "name": "journeyBuilder",
     "enabled": true,
     "position": 4
   },
@@ -28,20 +27,16 @@
     "v": 0,
     "name": "client",
     "enabled": true,
-    "name": "client",
-    "enabled": true,
     "position": 5
   },
   {
     "v": 0,
-    "name": "reports",
     "name": "reports",
     "enabled": true,
     "position": 6
   },
   {
     "v": 0,
-    "name": "documents",
     "name": "documents",
     "enabled": true,
     "position": 7
@@ -50,7 +45,6 @@
     "v": 0,
     "name": "openai",
     "enabled": true,
-    "position": 8
     "position": 8
   }
 ]
