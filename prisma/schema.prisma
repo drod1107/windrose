@@ -238,22 +238,23 @@ enum crm_Contracts_Status {
 }
 
 model Boards {
-  id               String    @id @default(auto()) @map("_id") @db.ObjectId
-  v                Int       @map("__v")
-  description      String
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  v                 Int       @map("__v")
+  description       String
   favorite         Boolean?
   favoritePosition Int?
-  icon             String?
-  position         Int?
-  title            String
-  user             String    @db.ObjectId
-  visibility       String?
-  sharedWith       String[]  @db.ObjectId
-  createdAt        DateTime? @default(now()) @db.Date
-  createdBy        String?   @db.ObjectId
-  updatedAt        DateTime? @updatedAt @db.Date
-  updatedBy        String?   @db.ObjectId
+  icon              String?
+  position          Int?
+  title             String
+  user              String    @db.ObjectId
+  visibility        String?
+  sharedWith        String[]  @db.ObjectId
+  createdAt         DateTime? @default(now()) @db.Date
+  createdBy         String?   @db.ObjectId
+  updatedAt         DateTime? @updatedAt @db.Date
+  updatedBy         String?   @db.ObjectId
 
+  //Create watchers field for board. It will be array of users
   //Create watchers field for board. It will be array of users
   watchers       String[] @db.ObjectId
   assigned_user  Users?   @relation(name: "assigned_user", fields: [user], references: [id])
@@ -327,7 +328,7 @@ model Documents {
   updated_by_user        String?             @db.ObjectId
   description            String?
   document_type          String?             @db.ObjectId
-  favorite               Boolean?
+  favorite              Boolean?
   document_file_mimeType String
   document_file_url      String
   status                 String?
@@ -496,10 +497,10 @@ model Users {
   crm_accounts_tasks   crm_Accounts_Tasks[]
   accounts             crm_Accounts[]
   leads                crm_Leads[]
-  created_by_user      crm_Opportunities[]      @relation(name: "created_by_user_relation")
-  assigned_opportunity crm_Opportunities[]      @relation(name: "assigned_to_user_relation")
-  assigned_contacts    crm_Contacts[]           @relation(name: "assigned_contacts")
-  crated_contacts      crm_Contacts[]           @relation(name: "created_contacts")
+  created_by_user      crm_Opportunities[]   @relation(name: "created_by_user_relation")
+  assigned_opportunity crm_Opportunities[]   @relation(name: "assigned_to_user_relation")
+  assigned_contacts    crm_Contacts[]        @relation(name: "assigned_contacts")
+  crated_contacts      crm_Contacts[]        @relation(name: "created_contacts")
   notion_account       journeyBuilder_notions[]
   openAi_key           openAi_keys[]
   assigned_contracts   crm_Contracts[]

@@ -20,12 +20,19 @@
   {
     "v": 0,
     "name": "journeyBuilder",
+    "name": "journeyBuilder",
     "enabled": true,
     "position": 4
   },
   {
     "v": 0,
-    "name": "client",
+    "name": "employee",
+    "enabled": true,
+    "position": 5
+  },
+  {
+    "v": 0,
+    "name": "invoice",
     "enabled": true,
     "position": 5
   },
@@ -39,7 +46,13 @@
     "v": 0,
     "name": "documents",
     "enabled": true,
-    "position": 7
+    "position": 8
+  },
+  {
+    "v": 0,
+    "name": "databox",
+    "enabled": true,
+    "position": 9
   },
   {
     "v": 0,

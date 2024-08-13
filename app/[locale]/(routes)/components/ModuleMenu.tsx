@@ -2,13 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Image from "next/image";
 
 import ProjectModuleMenu from "./menu-items/Projects";
 import JourneyBuilderModuleMenu from "./menu-items/JourneyBuilder";
+import InvoicesModuleMenu from "./menu-items/Invoices";
 import ReportsModuleMenu from "./menu-items/Reports";
 import DocumentsModuleMenu from "./menu-items/Documents";
 import WindroseNavModuleMenu from "./menu-items/WindroseNav";
-import ClientsModuleMenu from "./menu-items/Clients";
+import EmployeesModuleMenu from "./menu-items/Employees";
+import DataboxModuleMenu from "./menu-items/Databoxes";
 import CrmModuleMenu from "./menu-items/Crm";
 
 import AdministrationMenu from "./menu-items/Administration";
@@ -16,12 +19,14 @@ import DashboardMenu from "./menu-items/Dashboard";
 import EmailsModuleMenu from "./menu-items/Emails";
 import { cn } from "@/lib/utils";
 import windroseLogo from "../../../../public/images/windroseLogo.png"
+import windroseLogo from "../../../../public/images/windroseLogo.png"
 
 type Props = {
   modules: any;
   dict: any;
 };
 
+const ModuleMenu = ({ modules, dict }: Props) => {
 const ModuleMenu = ({ modules, dict }: Props) => {
   const [open, setOpen] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
@@ -42,6 +47,7 @@ const ModuleMenu = ({ modules, dict }: Props) => {
         }  h-screen p-5  pt-8 relative duration-300`}
       >
         <div className="flex flex-col gap-x-4 items-center">
+        <div className="flex flex-col gap-x-4 items-center">
           <div
             className={`cursor-pointer duration-500 border rounded-full px-4 py-2 ${
               open && "rotate-[360deg]"
@@ -49,8 +55,10 @@ const ModuleMenu = ({ modules, dict }: Props) => {
             onClick={() => setOpen(!open)}
           >
             <Image src={windroseLogo.src} alt="windrose logo" width={40} height={40}/>
+            <Image src={windroseLogo.src} alt="windrose logo" width={40} height={40}/>
           </div>
 
+          <div>
           <div>
           <h1
             className={` origin-left font-medium text-xl duration-200 ${
@@ -59,6 +67,7 @@ const ModuleMenu = ({ modules, dict }: Props) => {
           >
             {process.env.NEXT_PUBLIC_APP_NAME}
           </h1>
+          </div>
           </div>
         </div>
         <div className="pt-6">
@@ -81,11 +90,18 @@ const ModuleMenu = ({ modules, dict }: Props) => {
           {modules.find(
             (menuItem: any) =>
               menuItem.name === "journeyBuilder" && menuItem.enabled
+              menuItem.name === "journeyBuilder" && menuItem.enabled
           ) ? (
+            <JourneyBuilderModuleMenu open={open} />
             <JourneyBuilderModuleMenu open={open} />
           ) : null}
           {modules.find(
-            (menuItem: any) => menuItem.name === "client" && menuItem.enabled
+            (menuItem: any) => menuItem.name === "employee" && menuItem.enabled
+          ) ? (
+            <EmployeesModuleMenu open={open} />
+          ) : null}
+          {modules.find(
+            (menuItem: any) => menuItem.name === "invoice" && menuItem.enabled
           ) ? (
             <ClientsModuleMenu open={open} />
           ) : null}
@@ -105,6 +121,7 @@ const ModuleMenu = ({ modules, dict }: Props) => {
           {modules.find(
             (menuItem: any) => menuItem.name === "openai" && menuItem.enabled
           ) ? (
+            <WindroseNavModuleMenu open={open} />
             <WindroseNavModuleMenu open={open} />
           ) : null}
           <AdministrationMenu open={open} title={dict.ModuleMenu.settings} />

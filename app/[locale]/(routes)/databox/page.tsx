@@ -8,8 +8,10 @@ type Props = {};
 const CrmPage = (props: Props) => {
   return (
     <Container
-      title="Employees"
-      description={"Overview - Human Resources"}
+      title="Databox"
+      description={
+        "Overview - Databox alias Datové schránky"
+      }
     >
       <div>Module content here</div>
     </Container>
