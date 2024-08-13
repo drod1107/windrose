@@ -31,16 +31,18 @@ export async function generateMetadata({ params: { locale } }: Props) {
 const AuthLayout = async ({ children }: { children: React.ReactNode }) => {
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-full">
+    <div className="flex flex-col justify-center items-center min-h-screen w-full">
       <div className="flex justify-end items-center space-x-5 w-full p-5">
         <div className="flex items-center border rounded-md p-2">
           <Link href="https://discord.gg/Dd4Aj6S4Dz">
-            <DiscordLogoIcon className="w-5 h-5" />
+            <DiscordLogoIcon className="size-5" />
           </Link>
         </div>
         <ThemeToggle />
       </div>
-      <div className="flex items-center h-full overflow-hidden">{children}</div>
+      <div className="flex items-center grow h-full overflow-hidden">
+        {children}
+      </div>
       <Footer />
     </div>
   );
