@@ -1,11 +1,9 @@
-<a href="https://windrose.vercel.app/">
-  <h1 align="center">Windrose</h1>
+
 <a href="https://windrose.vercel.app/">
   <h1 align="center">Windrose</h1>
 </a>
 
 <p align="center">
-<img alt="OG" src="public/images/windroseLogo.png" />
 <img alt="OG" src="public/images/windroseLogo.png" />
 </p>
 
