@@ -1,4 +1,5 @@
-<a href="https://windrose.vercel.app/">
+
+<a href="https://app.windrose.dev/">
   <h1 align="center">Windrose</h1>
 </a>
 
