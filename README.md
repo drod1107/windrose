@@ -1,4 +1,4 @@
-<a href="https://windrose.vercel.app/">
+<a href="https://app.windrose.dev/">
   <h1 align="center">Windrose</h1>
 </a>
 
@@ -29,7 +29,7 @@ Windrose is built on top of Next CRM, which is a CRM build on top of the Next.JS
 
 ## Online Demo
 
-You can try it here [windrose.vercel.app](https://windrose.vercel.app), login via Google account or create new user and password.
+You can try it here [app.windrose.dev](https://app.windrose.dev), login via Google account or create new user and password.
 
 ## Tech Stack + Features
 
@@ -69,13 +69,11 @@ You can try it here [windrose.vercel.app](https://windrose.vercel.app), login vi
 
 1. More AI powered - daily summary of tasks and project (OpenAI integration) - in progress
 2. Email campaigns management - integration with MailChimp and Listmonk - in planning
-3. ~~Docker version - in planning (There will be complete bundle to run NextCRM on-premise)~~
-4. Testing - Jest + Cypress (if anyone want to help I will be very happy) - in planning
-5. Fix all Types issue (no more "any") - in progress
-6. i18n - localization - in progress (if anyone want to help I will be very happy)
-7. Turborepo - in planning
-8. ~~Upgrade to Next.js 14 - in planning~~
-9. Email client - in planning
+3. Testing - Jest + Cypress (if anyone want to help I will be very happy) - in planning
+4. Fix all Types issue (no more "any") - in progress
+5. i18n - localization - in progress (if anyone want to help I will be very happy)
+6. Turborepo - in planning
+7. Email client - in planning
 
 ## Emails
 
@@ -89,7 +87,8 @@ We use Tremor charts as a tool for creating charts in NextCRM
 
 ## Installation
 
-<details><summary><b>Show instructions</b></summary>
+<details>
+<summary><b>Show instructions</b></summary>
 
 1. Clone the repository:
 
@@ -146,7 +145,7 @@ We use Tremor charts as a tool for creating charts in NextCRM
    npm run dev
    ```
 
-1. http://localhost:3000
+1. <http://localhost:3000>
 
 </details>
 
