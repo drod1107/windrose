@@ -2,13 +2,13 @@
   {
     "v": 0,
     "model": "gpt-3.5-turbo",
-    "status": "ACTIVE",
+    "status": "INACTIVE",
     "description": "GPT 3.5 Turbo"
   },
   {
     "v": 0,
-    "model": "gpt-4",
-    "status": "INACTIVE",
-    "description": "GPT 4"
+    "model": "gpt-4o",
+    "status": "ACTIVE",
+    "description": "GPT 4 Omni"
   }
 ]

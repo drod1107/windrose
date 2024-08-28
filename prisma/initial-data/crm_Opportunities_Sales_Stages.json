@@ -1,55 +1,55 @@
 [
   {
     "v": 0,
-    "name": "New",
-    "order": 0,
-    "probability": 10
-  },
-  {
-    "v": 0,
-    "name": "Need analysis",
+    "name": "Inbound",
     "order": 0,
     "probability": 25
   },
   {
     "v": 0,
-    "name": "Signing",
-    "probability": 95,
+    "name": "Outbound Contact",
+    "order": 0,
+    "probability": 10
+  },
+  {
+    "v": 0,
+    "name": "In negotiation",
+    "probability": 50,
     "order": null
   },
   {
     "v": 0,
-    "name": "Offer sent",
+    "name": "Intake Docs sent",
     "probability": 30,
     "order": null
   },
   {
     "v": 0,
-    "name": "Offer accepted",
+    "name": "Intake docs filled and returned",
     "probability": 45,
     "order": null
   },
   {
     "v": 0,
-    "name": "Contract draft",
+    "name": "Agreement in drafting",
     "probability": 65,
     "order": null
   },
   {
     "v": 0,
-    "name": "Contract negotiation",
-    "probability": 75,
-    "order": null
-  },
-  {
-    "v": 0,
-    "name": "Send for signing",
+    "name": "Send agreement for signing",
     "probability": 80,
     "order": null
   },
   {
     "v": 0,
-    "name": "Realization of the project",
+    "name": "All action current and complete",
+    "probability": 100,
+    "order": null
+  },
+  {
+    "v": 0,
+    "name": "Agreement signed and returned, work in progress",
     "probability": 100,
     "order": null
   }

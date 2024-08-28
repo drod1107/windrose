@@ -19,32 +19,44 @@
   },
   {
     "v": 0,
-    "name": "journeyBuilder",
+    "name": "secondBrain",
     "enabled": true,
     "position": 4
   },
   {
     "v": 0,
-    "name": "client",
-    "enabled": true,
+    "name": "employee",
+    "enabled": false,
     "position": 5
   },
   {
     "v": 0,
-    "name": "reports",
+    "name": "invoice",
     "enabled": true,
     "position": 6
   },
   {
     "v": 0,
-    "name": "documents",
+    "name": "reports",
     "enabled": true,
     "position": 7
   },
   {
     "v": 0,
-    "name": "openai",
+    "name": "documents",
     "enabled": true,
     "position": 8
+  },
+  {
+    "v": 0,
+    "name": "databox",
+    "enabled": false,
+    "position": 9
+  },
+  {
+    "v": 0,
+    "name": "openai",
+    "enabled": true,
+    "position": 10
   }
 ]

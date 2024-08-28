@@ -3,109 +3,92 @@
 @tailwind utilities;
 
 @keyframes dialog-overlay-show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes dialog-overlay-hide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @keyframes dialog-content-show {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
+  from { transform: translateX(100%); }
+  to { transform: translateX(0%); }
 }
 
 @keyframes dialog-content-hide {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(100%);
-  }
+  from { transform: translateX(0%); }
+  to { transform: translateX(100%); }
 }
 
 .dropBox {
-  @apply flex flex-col overflow-hidden items-start justify-center text-xs p-2 m-2 rounded-md border border-slate-300 shadow-md;
+  @apply flex flex-col overflow-hidden items-start justify-center text-xs p-2 m-2 rounded-md border border-myrtle-green shadow-md;
 }
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 37 100% 92%; /* Light papaya-whip */
+    --foreground: 206 28% 24%; /* gunmetal */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 180 41% 32%; /* myrtle-green */
+    --muted-foreground: 206 28% 24%; /* gunmetal */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 37 100% 92%; /* Light papaya-whip */
+    --popover-foreground: 206 28% 24%; /* gunmetal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 37 100% 92%; /* Light papaya-whip */
+    --card-foreground: 206 28% 24%; /* gunmetal */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 180 41% 32%; /* myrtle-green */
+    --input: 180 41% 32%; /* myrtle-green */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 180 41% 32%; /* myrtle-green */
+    --primary-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 38 71% 63%; /* earth-yellow */
+    --secondary-foreground: 206 28% 24%; /* gunmetal */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 37 100% 92%; /* Light papaya-whip */
+    --accent-foreground: 323 45% 28%; /* palatinate */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Keep original destructive color */
+    --destructive-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --ring: 215 20.2% 65.1%;
+    --ring: 180 41% 32%; /* myrtle-green */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 206 28% 24%; /* gunmetal */
+    --foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 180 41% 32%; /* myrtle-green */
+    --muted-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 206 28% 24%; /* gunmetal */
+    --popover-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 206 28% 24%; /* gunmetal */
+    --card-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 180 41% 32%; /* myrtle-green */
+    --input: 180 41% 32%; /* myrtle-green */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 41% 32%; /* myrtle-green */
+    --primary-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 38 71% 63%; /* earth-yellow */
+    --secondary-foreground: 206 28% 24%; /* gunmetal */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 323 45% 28%; /* palatinate */
+    --accent-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
+    --destructive: 0 62.8% 30.6%; /* Keep original dark destructive color */
+    --destructive-foreground: 37 100% 92%; /* Light papaya-whip */
 
-    --ring: 217.2 32.6% 17.5%;
+    --ring: 180 41% 32%; /* myrtle-green */
   }
 }
 
@@ -114,6 +97,38 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply font-saira bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-lora text-primary;
+  }
+  a {
+    @apply text-secondary hover:text-primary transition-colors;
+  }
+  p {
+    @apply text-foreground;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply font-saira bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors;
+  }
+  .btn-secondary {
+    @apply font-saira bg-secondary text-secondary-foreground px-6 py-3 rounded-full hover:bg-accent hover:text-accent-foreground transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-content {
+    @apply text-foreground;
+  }
+  .bg-primary-custom {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .bg-secondary-custom {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
   }
 }

@@ -27,7 +27,7 @@ import {
   getUsersTasksCount,
 } from "@/actions/dashboard/get-tasks-count";
 import { getModules } from "@/actions/get-modules";
-import { getClients } from "@/actions/get-clients";
+import { getEmployees } from "@/actions/get-employees";
 
 import { getLeadsCount } from "@/actions/dashboard/get-leads-count";
 import { getBoardsCount } from "@/actions/dashboard/get-boards-count";
@@ -63,7 +63,7 @@ const DashboardPage = async () => {
   const modules = await getModules();
   const leads = await getLeadsCount();
   const tasks = await getTasksCount();
-  const clients = await getClients();
+  const employees = await getEmployees();
   const storage = await getStorageSize();
   const projects = await getBoardsCount();
   const contacts = await getContactCount();
@@ -79,7 +79,7 @@ const DashboardPage = async () => {
   const crmModule = modules.find((module) => module.name === "crm");
   const projectsModule = modules.find((module) => module.name === "projects");
   const documentsModule = modules.find((module) => module.name === "documents");
-  const clientsModule = modules.find((module) => module.name === "clients");
+  const employeesModule = modules.find((module) => module.name === "employees");
   const secondBrainModule = modules.find(
     (module) => module.name === "secondBrain"
   );
@@ -130,12 +130,12 @@ const DashboardPage = async () => {
           IconComponent={UserIcon}
           content={users}
         />
-        {clientsModule?.enabled && (
+        {employeesModule?.enabled && (
           <DashboardCard
-            href="/clients"
-            title="Clients"
+            href="/employees"
+            title="employees"
             IconComponent={Users2Icon}
-            content={clients.length}
+            content={employees.length}
           />
         )}
         {crmModule?.enabled && (

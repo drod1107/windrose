@@ -9,14 +9,14 @@ import NewTask from "./components/NewTask";
 import H4Title from "@/components/typography/h4";
 
 import { columns } from "./table-components/columns";
-import { JourneyBuilderDataTable } from "./table-components/data-table";
+import { SecondBrainDataTable } from "./table-components/data-table";
 
 import { getNotions } from "@/actions/get-notions";
 import { getActiveUsers } from "@/actions/get-users";
 import { getBoards } from "@/actions/projects/get-boards";
 import { Button } from "@/components/ui/button";
 
-const JourneyBuilderPage = async () => {
+const SecondBrainPage = async () => {
   const notions: any = await getNotions();
   const users: any = await getActiveUsers();
   const session = await getServerSession(authOptions);
@@ -27,7 +27,8 @@ const JourneyBuilderPage = async () => {
     return (
       <div>
         <H4Title>
-          Notions are not enable. Please enable it in your profile
+          No Notion boards are enabled. <br />
+          Please enable complete this integration by following the steps below.
         </H4Title>
 
         <div>
@@ -77,10 +78,10 @@ const JourneyBuilderPage = async () => {
         title="Journey Builder"
         description={"Overview - Your notions"}
       >
-        <JourneyBuilderDataTable columns={columns} data={notions} />
+        <SecondBrainDataTable columns={columns} data={notions} />
       </Container>
     </>
   );
 };
 
-export default JourneyBuilderPage;
+export default SecondBrainPage;
