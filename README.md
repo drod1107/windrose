@@ -1,4 +1,4 @@
-<a href="https://windrose.vercel.app/">
+<a href="https://app.windrose.dev/">
   <h1 align="center">Windrose</h1>
 </a>
 
@@ -73,7 +73,8 @@ We use Tremor charts as a tool for creating charts in Windrose
 
 ## Installation
 
-<details><summary><b>Show instructions</b></summary>
+<details>
+<summary><b>Show instructions</b></summary>
 
 1. Clone the repository:
 
@@ -130,7 +131,7 @@ We use Tremor charts as a tool for creating charts in Windrose
    npm run dev
    ```
 
-1. http://localhost:3000
+1. <http://localhost:3000>
 
 </details>
 

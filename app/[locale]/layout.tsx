@@ -2,6 +2,7 @@ import "./globals.css";
 
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 import { ReactNode } from "react";
 import { notFound } from "next/navigation";
@@ -63,6 +64,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+              <Script
+          async
+          strategy="beforeInteractive"
+          data-website-id="654606de-5c15-471d-9311-9fec11aac26a"
+          src="https://umami-windrose.vercel.app/script.js"
+        />
       <head>
         <meta
           name="viewport"
