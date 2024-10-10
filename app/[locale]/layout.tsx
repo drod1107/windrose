@@ -83,7 +83,7 @@ export default async function RootLayout({
           content="Windrose is a cutting edge Client Management System. Built with Next JS using NextCRM, an open source SaaS builder. Technology stack: NextJS with Typescript, MongoDB, TailwindCSS, React, Prisma, shadCN, resend.com, react.email and more."
         />
       </head>
-      <body className={inter.className + "h-screen overflow-y-auto"}>
+      <body className={inter.className + " min-h-screen"}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
